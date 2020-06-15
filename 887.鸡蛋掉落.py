@@ -7,14 +7,6 @@ def superEggDrop(self, K: int, N: int) -> int:
         if (K, N) in memo:
             return memo[(K, N)]
 
-        # for 1 <= i <= N:
-        #     res = min(res,
-        #             max(
-        #                 dp(K - 1, i - 1),
-        #                 dp(K, N - i)
-        #                 ) + 1
-        #             )
-
         res = float('INF')
         # 用二分搜索代替线性搜索
         lo, hi = 1, N
@@ -22,7 +14,6 @@ def superEggDrop(self, K: int, N: int) -> int:
             mid = (lo + hi) // 2
             broken = dp(K - 1, mid - 1) # 碎
             not_broken = dp(K, N - mid) # 没碎
-            # res = min(max(碎，没碎) + 1)
             if broken > not_broken:
                 hi = mid - 1
                 res = min(res, broken + 1)
