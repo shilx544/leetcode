@@ -1,6 +1,7 @@
 class Solution {
 public:
     int numOfSubarrays(vector<int>& arr, int k, int threshold) {
+        // 滑动窗口法，先固定4个元素的值，再逐一进行替换，直到遍历完成
         int n = arr.size();
         int sum = 0;
         int count = 0;
