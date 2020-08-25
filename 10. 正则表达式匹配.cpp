@@ -12,8 +12,8 @@ public:
             return true;
         }
 
-        for (char c : s) {
-            if ()
+        for (int i = 0; i < m; ++) {
+            for ()
         }
     }
 };
