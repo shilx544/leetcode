@@ -38,7 +38,7 @@ public:
         int left = matrix[0][0];
         int right = matrix[n - 1][n - 1];
         while (left < right) {
-            cout << left << "|" << right << "|" << ((right - left) >> 1) << endl;
+            // cout << left << "|" << right << "|" << ((right - left) >> 1) << endl;
             int mid = left + ((right - left) >> 1);
             if (check(matrix, mid, k, n)) {
                 right = mid;
