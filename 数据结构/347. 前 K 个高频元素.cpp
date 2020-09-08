@@ -18,6 +18,7 @@ public:
         // 对频率排序
         // 定义一个小顶堆，大小为k
         priority_queue<pair<int, int>, vector<pair<int, int>>, mycomparison> pri_que;
+        
         for (unordered_map<int, int>::iterator it = map.begin(); it != map.end(); it++) {
             pri_que.push(*it);
             if (pri_que.size() > k) {
