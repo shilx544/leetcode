@@ -8,7 +8,7 @@ public:
     }
 
     void backTrack(vector<string>& board, int row, vector<vector<string>>& res) {
-        if(row==board.size()){
+        if(row==board.size()) {
             res.emplace_back(board);
             return;
         }
