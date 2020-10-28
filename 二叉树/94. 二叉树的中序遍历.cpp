@@ -45,7 +45,8 @@ public:
                 S.push(rt);
                 rt=rt->left;
             }
-            rt = S.top();S.pop();
+            rt = S.top();
+            S.pop();
             v.push_back(rt->val);
             rt = rt->right;
         }
