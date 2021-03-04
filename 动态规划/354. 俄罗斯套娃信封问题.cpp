@@ -14,9 +14,6 @@ public:
         }
         sort(envelopes.begin(), envelopes.end(), cmp);
         vector<int> dp(envelopes.size(), 1);
-        int result = 1;
-        int last_w = envelopes[0][0];
-        int last_h = envelopes[0][1];
         for (int i = 0; i < envelopes.size(); ++i) {
             for (int j = 0; j <= i; ++j) {
                 if (envelopes[i][0] > envelopes[j][0] && 
