@@ -14,10 +14,10 @@ public:
             for(int i = u; i <= d; ++i) 
                 ans.push_back(matrix[i][r]); //向下
             if(-- r < l) break; //重新设定有边界
-            for(int i = r; i >= l; --i) 
+            for(int i = r; i >= l; --i)
                 ans.push_back(matrix[d][i]); //向左
             if(-- d < u) break; //重新设定下边界
-            for(int i = d; i >= u; --i) 
+            for(int i = d; i >= u; --i)
                 ans.push_back(matrix[i][l]); //向上
             if(++ l > r) break; //重新设定左边界
         }
